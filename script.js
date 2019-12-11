@@ -3,6 +3,9 @@
  * @param {Array} arr The array to extract the random item from
  */
 function getRandomLogo (isFavicon = false) {
+  const lastResultKey = isFavicon ? 'last-favicon' : 'last-logo'
+  const lastResult = localStorage.getItem(lastResultKey)
+
   const logoList = [
     'mista',
     'circulo',
@@ -15,7 +18,12 @@ function getRandomLogo (isFavicon = false) {
 
   if (isFavicon && random === 0) return getRandomLogo(isFavicon)
 
-  return logoList[random]
+  const result = logoList[random]
+
+  if (result === lastResult) return getRandomLogo(isFavicon)
+
+  localStorage.setItem(lastResultKey, result)
+  return result
 }
 
 function setRandomLogo () {
@@ -32,7 +40,15 @@ function setRandomFavicon () {
   favicon.setAttribute('href', newFaviconPath)
 }
 
+function addButtonListener () {
+  const button = document.getElementById('visit')
+  button.addEventListener('click', function () {
+    window.location.href = 'https://getready.chega.ai'
+  })
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   setRandomLogo()
   setRandomFavicon()
+  addButtonListener()
 });
