@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="icon" id="favicon" type="image/png" href=".assets/favicon/circulo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="content-container">
-    <img id="logo" src="./logo.svg" alt="Logo do chega.ai">
+    <img id="logo" src="./assets/logo/mista.svg" alt="Logo do chega.ai">
     <div class="content">
       <p>Em face dos problemas que a maioria das comunidades de desenvolvimento de software enfrentam com as atuais
         ferramentas para organização de seus eventos e encontros, principalmente a questão financeira, diversos
@@ -37,23 +38,13 @@
       <p>Através da expertise da própria comunidade, o Chega.ai obterá dados interessantes e insights que podem ser
         extremamente úteis para criar um ecossistema de comunidades cada vez melhor e mais rico, colocando em seu centro
         ninguém menos do que a própria comunidade.</p>
-
-      <p>
-        Para ficar por dentro de todo o processo de desenvolvimento, acesse:
-        <a href="https://chega.ai">chega.ai</a>
-      </p>
     </div>
     <button class="visit">Ir para o chega.ai</button>
   </div>
 
-  <script>
-    document.write(
-      '<script src="http://' +
-      (location.host || 'localhost').split(':')[0] +
-      ':35729/livereload.js?snipver=1"></' +
-      'script>'
-    )
-  </script>
+  <script src="./script.js"></script>
+
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 
 </html>
