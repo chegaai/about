@@ -46,8 +46,6 @@ body {
 }
 
 button {
-  background-color: var(--green);
-  margin: var(--content-spacing) var(--content-padding-x) 20px var(--content-padding-x);
   padding: 10px;
   font-family: var(--default-font);
   border: none;
@@ -55,6 +53,15 @@ button {
   color: white;
   font-size: 11pt;
   width: calc(60% + 60px);
+}
+
+.visit {
+  background-color: var(--green);
+  margin: var(--content-spacing) var(--content-padding-x) 10px var(--content-padding-x);
+}
+
+.contact {
+  background-color: var(--yellow);
 }
 
 .center {

@@ -42,10 +42,17 @@ function setRandomFavicon () {
 
 function addButtonListener () {
   const button = document.getElementById('visit')
+  const buttonContact = document.getElementById('contact')
+
   button.addEventListener('click', function () {
     window.location.href = 'https://getready.chega.ai'
   })
+
+  buttonContact.addEventListener('click', function () {
+    window.location.href = '/contact.html'
+  })
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   setRandomLogo()
